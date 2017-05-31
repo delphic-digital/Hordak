@@ -1,6 +1,7 @@
 
-
 Goals:
+
+Split each type of pipeline into it's own container - add as required for a project. 
 
  - pull deps with yarn & lock them down for a project
  - compile with webpack (ES6 / JSX / ES5 / Sass -> postcss -> css)
