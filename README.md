@@ -1,4 +1,3 @@
-
 Overview:
 
 Each type of compilation runs inside it's own docker container.

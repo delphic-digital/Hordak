@@ -7,7 +7,6 @@ module.exports = {
   entry: {
       app: [
         './src/index.js',
-        './src/sass/main.scss'
       ]
   },
   output: {
@@ -17,15 +16,7 @@ module.exports = {
   module: {
     rules: [
         { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },
-        { test: /\.jsx$/, use: 'babel-loader', exclude: /node_modules/ },
-        {
-            test: /\.scss$/,
-            use: ExtractTextPlugin.extract({
-                use: ['css-loader', 'sass-loader'],
-                fallback: 'style-loader',
-            }),
-            exclude: /node_modules/
-        }
+        { test: /\.jsx$/, use: 'babel-loader', exclude: /node_modules/ }
     ]
   },
   plugins: [
@@ -33,9 +24,6 @@ module.exports = {
         template: './src/index.html',
         filename: 'index.html',
         inject: 'body'
-    }), 
-    new ExtractTextPlugin({
-        filename: '[name].css',
     })
   ]
 }
